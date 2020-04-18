@@ -1,0 +1,145 @@
+.logo {
+  position: relative;
+
+  img {
+    height: 15rem;
+    @include respond(laptop) {
+      height: 13rem;
+    }
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background: transparent;
+  position: relative;
+  // position: absolute;
+  width: 100%;
+  font-family: "Cuprum", sans-serif;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  @include respond(tablet) {
+    position: fixed;
+    background: $white;
+  }
+
+  #acrb-menu {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      z-index: 999;
+      @include respond(tablet) {
+        height: 92vh;
+        position: absolute;
+        right: 0;
+        top: 13vh;
+        background: $white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        overflow-y: scroll;
+        overflow: hidden;
+      }
+
+      li {
+        list-style: none;
+        padding: 1rem;
+        display: inline-block;
+        &:last-child {
+          background: $lemon;
+          border-radius: 2rem;
+          transition: all 0.3s;
+          &:hover {
+            box-shadow: 3px 3px 1px #252525;
+          }
+        }
+        @include respond(tablet) {
+          opacity: 0;
+        }
+
+        a {
+          color: $black;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.5rem;
+          &:hover,
+          &:active,
+          &:focus {
+            border-bottom: 2px solid $lemon;
+          }
+        }
+      }
+    }
+    .nav-active {
+      transform: translateX(0%) !important;
+    }
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+    @include respond(tablet) {
+      display: block;
+    }
+
+    div {
+      width: 25px;
+      height: 3px;
+      background-color: $black;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+// X -> sign
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+// media query for phone
+@include respond(tablet) {
+  body {
+    overflow-x: hidden;
+  }
+}
+.current-menu-item > a {
+  border-bottom: 2px solid $lemon;
+}
+#post {
+  .sectioncolor {
+    background-color: $lime;
+    @include respond(tablet) {
+      padding: 2rem;
+    }
+  }
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+
+    h1 {
+      margin: 0 auto;
+      font-size: 5rem;
+      color: $white;
+      text-transform: capitalize;
+      letter-spacing: 0.2rem;
+      @include respond(phone) {
+        letter-spacing: 0rem;
+        font-size: 4rem;
+      }
+    }
+  }
+}

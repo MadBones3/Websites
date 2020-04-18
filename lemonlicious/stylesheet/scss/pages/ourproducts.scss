@@ -1,0 +1,322 @@
+#products {
+/* start off color */
+    background: $lime;
+    transition: all 2s ease;
+    position: relative;
+    overflow: hidden;
+    position: relative;
+
+    /*banner*/
+    .sectioncolor {
+        background: $product-banner;
+        @include respond(tablet) {
+            padding: 2rem;
+        }
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        padding-top: 30rem;
+        z-index: 2;
+        @include respond(large-laptop) {
+            height: 80vh;
+            padding-top: 25rem;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+            height: 80vh;
+            padding-top: 10rem;
+            justify-content: space-evenly;
+        }
+        @include respond(phone) {
+            height: 70vh;
+            padding: 0rem;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4rem;
+            h1 {
+                font-size: 5rem;
+                display: flex;
+                flex-direction: column;
+                @include respond(tablet) {
+                    padding: 2rem 0rem;
+                    align-items: center;
+                }
+                @include respond(phone) {
+                    padding: 0rem 0rem;
+                    font-size: 4rem;
+                }
+                span {
+                    width: 100%;
+                    &:nth-child(odd) {
+                        width: 100%;
+                        @include respond(phone) {
+                            width: 100%;
+                        }
+                    }
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        img {
+            width: 100%;
+            z-index: 2;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+        .square {
+            position: relative;
+            width: 40%;
+            height: auto;
+            display: flex;
+            @include respond(tablet) {
+                width: 30rem;
+                height: 30rem;
+            }
+            @include respond(phone) {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+        /* Span 1 */
+        .square span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            z-index: 1;
+            background: $orange;
+            transition: 0.5s;
+            animation: animate 30s linear infinite;
+        }
+        img {
+            border-radius: 56% 44% 32% 68% / 52% 24% 76% 48%;
+        }
+        .content {
+            .Sone {
+                background-image: url('/wp-content/themes/lemonlicious/images/reddots.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Stwo {
+                background-image: url('/wp-content/themes/lemonlicious/images/blackstrip1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Slem {
+                background-image: url('/wp-content/themes/lemonlicious/images/yellowlemon.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 9rem;
+                height: 12rem;
+                z-index: 3;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 6rem;
+                    height: 8rem;
+                }
+            }
+        }
+    }
+    /*end banner*/
+    .desc-color {
+        background-color: $white;
+        .underbanner {
+            padding: 10rem 0rem;
+        }
+    }
+
+    .container {
+        // padding-top: 10rem;
+        @include respond(tablet) {
+            padding-top: 0rem;
+            margin-bottom: 40rem;
+        }
+    }
+    .part {
+        position: relative;
+        @include respond(phone) {
+            margin-bottom: 20rem;
+        }
+    }
+    .redface {
+        position: absolute;
+        display: block;
+        top: 24%;
+        left: -10px;
+        transform: rotate(30deg);
+        @include respond(large-laptop) {
+            top: 27%;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    .orangeface {
+        position: absolute;
+        display: block;
+        top: 42%;
+        right: -20px;
+        transform: rotate(-40deg);
+        @include respond(large-laptop) {
+            top: 46%;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    .greenface {
+        position: absolute;
+        display: block;
+        top: 63%;
+        left: -10px;
+        transform: rotate(30deg);
+        @include respond(large-laptop) {
+            top: 65%;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+    }
+    .blueface {
+        position: absolute;
+        display: block;
+        top: 85%;
+        right: -20px;
+        transform: rotate(10deg);
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    .content {
+        display: table;
+        height: 100%;
+        width: 100%;
+
+        .color {
+            color: #fff;
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            clear: both;
+
+            .product-flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-direction: row;
+                margin: 10rem 0;
+                @include respond(laptop) {
+                    padding: 0 0rem;
+                }
+                @include respond(tablet) {
+                    width: 100%;
+                    flex-direction: column;
+                }
+                @include respond(phone) {
+                    padding: 0 0;
+                    margin: 15rem 0;
+                }
+                img {
+                    width: 50%;
+                    @include respond(phone) {
+                        width: 100%;
+                        margin-bottom: 20rem;
+                        padding: 2rem 0rem;
+                    }
+                }
+                .product-content {
+                    padding-right: 13rem;
+                    font-size: 1.3rem;
+                    padding-left: 0rem;
+                    @include respond(large-laptop) {
+                        padding-right: 10rem;
+                    }
+                    @include respond(laptop) {
+                        padding-right: 5rem;
+                    }
+                    @include respond(tablet) {
+                        padding: 0 0rem;
+                    }
+
+                    h2 {
+                        padding-bottom: 2rem;
+                        color: $black;
+                        font-size: 5rem;
+                        @include respond(laptop) {
+                            font-size: 4.5rem;
+                        }
+                        @include respond(tablet) {
+                            font-size: 4rem;
+                        }
+                        @include respond(phone) {
+                            font-size: 3.7rem;
+                        }
+                    }
+                    .desc {
+                        @include respond(tablet) {   
+                            padding: 2rem 0rem;
+                            font-size: 1.3rem;
+                        }
+                        p {
+                            color: $black;
+                            font-weight: 200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .part:nth-child(even) .product-flex {
+        flex-direction: row-reverse;
+        @include respond(tablet) {
+            width: 100%;
+            flex-direction: column;
+            margin: 15rem 0;
+        }
+        .product-content {
+            padding-left: 10rem;
+            @include respond(tablet) {
+                padding-left: 0rem;
+            }
+        }
+    }    
+}

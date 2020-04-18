@@ -1,0 +1,41 @@
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone;
+600 - 900px:    Tablet;
+900 - 1200px:   laptop;
+1200 - 1800px:   large-laptop;
+1800px:         desktop;
+
+$breakpoint argumant choices:
+- phone
+- tablet
+- laptop
+- large-laptop
+- desktop
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) {@content}; //600px --600/16=37.5em
+    }
+    @if $breakpoint == tablet {
+        @media (max-width: 56.25em) {@content}; // 900px
+    }
+    @if $breakpoint == laptop {
+        @media (max-width: 75em) {@content}; //1200px
+    }
+    @if $breakpoint == large-laptop {
+        @media (max-width: 112.5em) {@content}; //1800px >
+    }
+    @if $breakpoint == desktop {
+        @media (min-width: 112.5em) {@content}; //1800px <
+    }
+}

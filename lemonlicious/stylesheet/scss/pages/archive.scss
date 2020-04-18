@@ -1,0 +1,268 @@
+#archive {
+    width: 100%;
+    height: auto;
+    .orangeblob {
+        position: absolute;
+        top: 20rem;
+        left: 0;
+        z-index: 1;
+        display: block;
+        img {    
+            width: 40rem;
+            height: 50rem;
+            @include respond(phone) {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .Ylemon {
+        position: absolute;
+        top: -4rem;
+        left: 9rem;
+        display: block;
+        z-index: 2;
+        img {  
+            width: 10rem;
+            height: 13rem;
+        }
+    }
+    .Bline {
+        position: absolute;
+        top: -1rem;
+        left: 0rem;
+        display: block;
+        z-index: 1;
+        img {    
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+    .Ylemon, .Ydot, .Bline {
+        @include respond(tablet) {
+            display: none !important;
+        }
+    }
+    .sectioncolor {
+        background: $rasberry;
+        @include respond(tablet) {
+            padding: 2rem;
+        }
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        padding-top: 20rem;
+        z-index: 2;
+        @include respond(large-laptop) {
+            height: 80vh;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+            height: 80vh;
+            padding-top: 0rem;
+            justify-content: space-evenly;
+        }
+        @include respond(phone) {
+            height: 70vh;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4rem;
+            @include respond(phone) {
+                margin: 5rem 0;
+            }
+            h1 {
+                display: flex;
+                flex-direction: column;
+                color: $white;
+                @include respond(tablet) {
+                    padding: 2rem 0rem;
+                    align-items: center;
+                }
+                @include respond(phone) {
+                    padding: 0rem 0rem;
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            z-index: 2;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+        .square {
+            position: relative;
+            width: 40%;
+            height: auto;
+            display: flex;
+            @include respond(tablet) {
+                width: 30rem;
+                height: 30rem;
+            }
+            @include respond(phone) {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+        /* Span 1 */
+        .square span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            z-index: 1;
+            background: $blue;
+            transition: 0.5s;
+            animation: animate 30s linear infinite;
+        }
+        img {
+            border-radius: 56% 44% 32% 68% / 52% 24% 76% 48%;
+        }
+        .content {
+            .Sone {
+                background-image: url('/wp-content/themes/lemonlicious/images/yellowdot1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Stwo {
+                background-image: url('/wp-content/themes/lemonlicious/images/blackstrip1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Slem {
+                background-image: url('/wp-content/themes/lemonlicious/images/yellowlemon.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 7rem;
+                height: 9rem;
+                z-index: 3;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 6rem;
+                    height: 8rem;
+                }
+            }
+        }
+    }
+    .allPostsWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10rem 0rem;
+        z-index: 5;
+        @include respond(laptop) {
+            padding: 10rem 2rem;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+        .archive-wrap {
+            display: flex;
+            flex-direction: column;
+            width: calc(33.3% - 1rem);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            min-height: 40rem;
+            background: $white;
+            position: relative;
+            border-radius: 1rem;
+            box-shadow: 2px 2px 6px 1px $shadow;
+            &:hover {
+                box-shadow: 3px 3px 3px 0px $hover-shadow;
+            }
+            @include respond(tablet) {
+                width: 50%;
+            }
+            @include respond(phone) {
+                width: 100%;
+            }
+            .imager {
+                width: 100%;
+                display: block;
+                a {
+                    height: 240px;
+                    display: block;
+                    width: 100%;
+                    background-size: cover;
+                }
+            }
+            .archivePost {
+                color: $black;
+                h3 {
+                    padding: 2rem 0rem;
+                }
+                a {
+                    color: inherit;
+                }
+                .read {
+                    color: $orange;
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        padding: 2rem 0 0 0;
+        display: block;
+        overflow: hidden;
+        border-top: 0.2rem solid $lime;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: $black;
+            padding: 0.2rem;
+            font-size: 1.3rem;
+            transition: all 0.3s ease-in;
+            &:hover {
+                color: $lemon;
+                background: $black;
+                padding: 0.4rem;
+                border-radius: 1rem;
+            }
+        }
+
+        .alignleft {
+            margin-left: 2rem;
+        }
+        .alignright {
+            margin-right: 2rem;
+        }
+    }
+}

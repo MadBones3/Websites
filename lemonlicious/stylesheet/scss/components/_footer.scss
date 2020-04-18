@@ -1,0 +1,188 @@
+.lemon-footer {
+    background: $footblack;
+    color: $white;
+    padding: 5rem 5rem 0rem 5rem;
+    font-size: 1.3rem;
+    position: relative;
+    .dots_footer {
+        width: 9rem;
+        height: 10rem;
+        position: absolute;
+        top: -5rem;
+        left: 0;
+        display: block;
+    }
+    .redlemon_footer {
+        width: 9rem;
+        height: 9rem;
+        position: absolute;
+        top: 17rem;
+        right: 0rem;
+        display: block;
+        z-index: 2;
+        @include respond(laptop) {
+            top: 15rem;
+        }
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+    .stripe_footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: block;
+        width: 6rem;
+        height: 10rem;
+    }
+
+    // remember to delete the margin-top
+    // margin-top: 700px;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        @include respond(tablet) {
+            flex-wrap: wrap;
+        }
+        @include respond(phone) {
+            flex-direction: column;
+        }
+
+        .col {
+            @include respond(tablet) {
+                width: 50%;
+            }
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+
+        .newsletter {
+            // padding: 0rem 5rem;
+        }
+        .quicklinks {
+            @include respond(tablet) {
+                margin-bottom: 4rem;
+            }
+            h3 {
+                margin-bottom: 1rem;
+            }
+            #acrb-ql-menu {
+                ul {
+                    list-style: none;
+                
+                    li {
+                        padding-bottom: 1rem;
+
+                        a {
+                            &:hover {
+                                color: $lemon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .socialicons {
+            // padding: 0rem 5rem;
+            @include respond(tablet) {
+                text-align: left;
+            }
+            @include respond(tablet) {
+                margin-bottom: 4rem;
+            }
+
+            .icons {
+                display: flex;
+                flex-wrap: wrap;
+
+                a {
+                    color: $white;
+                    background: transparent;
+                    transition: all 0.3s;
+                    @include respond(tablet) {
+                        margin-right: 2rem;
+                    }
+                    &:hover {
+                        color: $footyellow;
+                    }
+                }
+
+                i {
+                    padding: 1rem 1rem 0rem 0rem;
+                    font-size: 2em;
+                }
+            }
+            .halaal {
+                padding-top: 2rem;
+                width: auto;
+                img {
+                    height: 13rem;
+                    pointer-events: none;
+                    margin-bottom: 0.5rem;
+                    @include respond(tablet){
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+                .hal-number {
+                    border: 0.1rem solid $white;
+                    color: $white;
+                    text-align: center;
+                    background: $footblack;
+                    margin: auto;
+                    width: 70px;
+                    p {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        // Gravity forms
+        input#gform_submit_button_1 {
+            background: $footyellow;
+            border: none;
+            display: inline-block;
+            padding: 1rem 4rem;
+            font-family: 'cuprum', 'sans-serif';
+            border-radius: 2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                background: $white;
+            }
+        }
+        #input_1_1 span input, 
+        #input_1_2, 
+        #input_1_3 {
+            background: transparent;
+            border-bottom: 2px solid $white;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            color: $lemon;
+        }
+    }
+}
+.copyRight {
+    // position: relative;
+    height: auto;
+    width: 100%;
+    background: $footblack;
+    text-align: center;
+    padding: 2rem 0rem;
+    color: $white;
+    font-size: 1.2rem;
+    font-family: 'Cuprum', sans-serif;
+    a{
+        text-decoration: none;
+        color: $white;
+        transition: all 0.3s;
+        &:hover {
+            color: $footyellow;
+        }
+    }
+}

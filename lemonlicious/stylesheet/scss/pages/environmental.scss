@@ -1,0 +1,257 @@
+#environmental {
+    width: 100%;
+    height: auto;
+    @include respond(tablet) {
+        margin-top: 0rem;
+    }
+    .sectioncolor {
+        background: $blue;
+        @include respond(tablet) {
+            padding: 2rem;
+        }
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        padding-top: 20rem;
+        z-index: 2;
+        @include respond(large-laptop) {
+            height: 80vh;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+            height: 80vh;
+            padding-top: 10rem;
+            justify-content: space-evenly;
+        }
+        @include respond(phone) {
+            height: 70vh;
+            padding: 0rem;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4rem;
+            @include respond(phone) {
+                margin: 5rem 0;
+            }
+            h1 {
+                font-size: 5rem;
+                display: flex;
+                flex-direction: column;
+                @include respond(tablet) {
+                    padding: 2rem 0rem;
+                    align-items: center;
+                }
+                @include respond(phone) {
+                    padding: 0rem 0rem;
+                    font-size: 4rem;
+                }
+                span {
+                    width: 100%;
+                    &:nth-child(odd) {
+                        width: 100%;
+                        @include respond(phone) {
+                            width: 100%;
+                        }
+                    }
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        img {
+            width: 100%;
+            z-index: 2;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+        .square {
+            position: relative;
+            width: 40%;
+            height: auto;
+            display: flex;
+            @include respond(tablet) {
+                width: 30rem;
+                height: 30rem;
+            }
+            @include respond(phone) {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+        /* Span 1 */
+        .square span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            z-index: 1;
+            background: $lemon;
+            transition: 0.5s;
+            animation: animate 30s linear infinite;
+        }
+        img {
+            border-radius: 56% 44% 32% 68% / 52% 24% 76% 48%;
+        }
+        .content {
+            .Sone {
+                background-image: url('/wp-content/themes/lemonlicious/images/reddots.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Stwo {
+                background-image: url('/wp-content/themes/lemonlicious/images/blackstrip1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Slem {
+                background-image: url('/wp-content/themes/lemonlicious/images/redlemonnodots.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 9rem;
+                height: 10rem;
+                z-index: 3;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 7rem;
+                    height: 8rem;
+                }
+            }
+        }
+    }
+    .enviprom {
+
+        .writeup {
+            padding: 10rem 0rem;
+            font-size: 1.6rem;
+            @include respond(laptop) {
+                padding-top: 10rem;
+                padding-bottom: 5rem;
+            }
+            @include respond(tablet) {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: inherit;
+            }
+        }
+
+        .bottle-flex {
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 5rem;
+            flex-wrap: wrap;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+                width: calc(33% - 3rem);
+                @include respond(phone) {
+                    width: 100%;
+                    margin: 3rem 0;
+                }
+
+                .imager {
+                    display: block;
+                    @include respond(tablet) {
+                        width: 33.3%;
+                    }
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                        display: block;
+                        object-fit: cover;
+                        object-position: center top;
+                        @include respond(tablet) {
+                            width: 100%;
+                            height: auto;
+                        }
+                        @include respond(phone) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .bottle-content {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+                    @include respond(tablet) {
+                        width: 33.3%;
+                    }
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+
+                    h3 {
+                        padding-bottom: 1rem;
+                    }
+
+                }
+                .cirlce {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 5rem;
+                    border-radius: 10%;
+                    background-color: $black;
+                    color: $lemon;
+                    position: relative;
+                    margin: 1.5rem 1.5rem 1.5rem 0rem;
+                    @include respond(tablet) {
+                        margin: 1rem 1rem 1rem 0rem;
+                    }
+
+                    p {
+                        font-size: 3rem;
+                        padding: 1rem 0;
+                    }
+                }
+            }
+        }
+        
+    }
+}

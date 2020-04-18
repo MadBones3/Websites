@@ -1,0 +1,65 @@
+#steps {
+    width: 100%;
+    background: $light-grey;
+    position: relative;
+    padding-bottom: 20rem;
+    margin-bottom: 7rem;
+    @include respond(tablet) {
+        height: 70vh;
+    }
+    @include respond(phone) {
+        height: 60vh;
+    }
+
+    .bluelemon {
+        position: absolute;
+        top: 8rem;
+        left: 4rem;
+        display: block;
+        z-index: 2;
+        @include respond(phone) {
+            display: none;
+        }
+        img {
+            width: 12rem;
+            height: 12rem;
+            @include respond(laptop) {
+                width: 10rem;
+                height: 10rem;
+            }       
+        }
+    }
+    .blackstripe {
+        position: absolute;
+        top: 5rem;
+        left: 0rem;
+        display: block;
+        z-index: 1;
+        @include respond(phone) {
+            display: none;
+        }
+        img {
+            width: auto;
+            height: 13rem;
+            @include respond(laptop) {
+                height: 10rem;
+            }
+        }
+    }
+    .main-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 5rem 10rem 1rem;
+        @include respond(phone) {
+            padding: 8rem 0rem;
+        }
+
+        .desc {
+            padding: 1rem 0;
+        }
+    }
+}

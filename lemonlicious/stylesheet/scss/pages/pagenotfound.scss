@@ -1,0 +1,48 @@
+#fourzerofour {
+    background: $lime;
+}
+#post-404 {
+    width: 100%;
+    height: 80vh;
+    @include respond(tablet) {
+        height: 60vh;
+    }
+
+    .error-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            animation: spin 0.5s ease-in 1s alternate;
+            @include respond(tablet) {
+                width: 15rem;
+            }
+        }
+
+        span {
+            color: $white;
+            font-size: 18rem;
+            animation: rotateX 0.5s ease-in-out 0.5s alternate;
+            @include respond(tablet) {
+                font-size: 15rem;
+            }
+        }
+    }
+    .error-mesg {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-size: 4rem;
+        padding-top: 3rem;
+        text-align: center;
+
+        a {
+            padding: 3rem;
+            transition: color 0.3s ease-in;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}

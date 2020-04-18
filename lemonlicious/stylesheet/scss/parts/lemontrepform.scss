@@ -1,0 +1,189 @@
+#lemonform {
+    background: $white;
+    position: relative;
+    margin-top: -20rem;
+    margin-bottom: 10rem;
+
+    .sectionflex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+
+        .left{
+            display: flex;
+            z-index: 2;
+            width: 50%;
+            @include respond(laptop) {
+                justify-content: center;
+                padding: 4rem 0rem;
+            }
+            @include respond(tablet) {
+                width: 100%;
+            }
+            .square {
+                position: relative;
+                width: 80%;
+                height: auto;
+                display: flex;
+                @include respond(tablet) {
+                    width: 25rem;
+                    height: 25rem;
+                }
+            }
+            /* Span 1 */
+            .square span:nth-child(1) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+                z-index: 1;
+                background: $lime;
+                transition: 0.5s;
+                animation: animate 30s linear infinite;
+            }
+            img {
+                border-radius: 42% 58% 66% 34% / 41% 43% 57% 59%;
+            }
+            .content {
+                z-index: 2;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    border-radius: 42% 58% 66% 34% / 41% 43% 57% 59%;
+                }
+                .Sone {
+                    width: 12rem;
+                    height: 12rem;
+                    background-image: url('/wp-content/themes/lemonlicious/images/blackstrip1.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    transform: rotate(66deg);
+                    @include respond(tablet) {
+                        // display: none;
+                        top: -1.1rem;
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                }
+                .Stwo {
+                    width: 12rem;
+                    height: 12rem;
+                    background-image: url('/wp-content/themes/lemonlicious/images/reddots.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    display: block;
+                    @include respond(tablet) {
+                        // display: none;
+                        width: 8rem;
+                        height: 8rem;
+                    }
+                }
+            }
+        }
+        .right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            text-align: center;
+            @include respond(tablet) {
+                width: 100%;
+            }
+
+            .desc {
+                padding: 2rem 0;
+                text-align: center;
+            }
+            .form {
+                
+                padding-top: 3rem;
+
+                .tab {
+                    overflow: hidden;
+                    border-bottom: 0.2rem solid $black;
+
+                    button {
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
+                        // float: left;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        padding: 1rem 2rem;
+                        transition: 0.3s;
+                        font-size: 1.7rem;
+                        background: #cccccc;
+                        margin: 0rem 0.2rem;
+                        color: $black;
+                        font-weight: 500;
+                        @include respond(laptop) {
+                            padding: 1rem 1.2rem;
+                        }
+                        @include respond(phone) {
+                            padding: 1.5rem 1rem;
+                            font-size: 1.5rem;
+                            margin: 0.5rem 0rem;
+                            float: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            width: 100%;
+                            border-top-right-radius: 0;
+                            border-top-left-radius: 0;
+                        }
+
+                        &:hover {
+                            background-color: $lemon;
+                        }
+
+                    }
+                    .active {
+                        background-color: $lemon;
+                    }
+                }
+                .tabcontent {
+                    display: none;
+                    // padding: 0.6rem 1.2rem;
+                    -webkit-animation: fadeEffect 1s;
+                    animation: fadeEffect 1s;
+
+                    .descform {
+                        margin: 1rem 0rem;
+                        text-align: center;
+                    }
+                }
+                .gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+                    font-size: inherit;
+                    font-family: inherit;
+                    padding: 1rem;
+                    letter-spacing: normal;
+                    border: 0.1rem solid $light-grey;
+                    border-radius: 1rem;
+                    margin: 0;
+                }
+                .gform_wrapper ul li.gfield {
+                    margin-top: 0;
+                }
+            }
+
+        }
+    }
+}

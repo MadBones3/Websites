@@ -1,0 +1,309 @@
+#local_banner {
+    width: 100%;
+    height: auto;
+    .sectioncolor {
+        background: $lime;
+        @include respond(tablet) {
+            padding: 2rem;
+        }
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        padding-top: 20rem;
+        z-index: 2;
+        @include respond(large-laptop) {
+            height: 80vh;
+        }
+        @include respond(tablet) {
+            flex-direction: column;
+            height: 80vh;
+            padding-top: 0rem;
+            justify-content: space-evenly;
+        }
+        @include respond(phone) {
+            height: 70vh;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 4rem;
+            @include respond(phone) {
+                margin: 5rem 0;
+            }
+            h1 {
+                font-size: 5rem;
+                display: flex;
+                flex-direction: column;
+                @include respond(tablet) {
+                    padding: 2rem 0rem;
+                    align-items: center;
+                }
+                @include respond(phone) {
+                    padding: 0rem 0rem;
+                    font-size: 4rem;
+                }
+                span {
+                    width: 100%;
+                    &:nth-child(odd) {
+                        width: 100%;
+                        @include respond(phone) {
+                            width: 100%;
+                        }
+                    }
+                    @include respond(phone) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        img {
+            max-width: 100%;
+            z-index: 2;
+            @include respond(phone) {
+                width: 100%;
+            }
+        }
+        .square {
+            position: relative;
+            width: 40%;
+            height: auto;
+            display: flex;
+            @include respond(tablet) {
+                width: 30rem;
+                height: 30rem;
+            }
+            @include respond(phone) {
+                width: 25rem;
+                height: 25rem;
+            }
+        }
+        /* Span 1 */
+        .square span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+            z-index: 1;
+            background: $orange;
+            transition: 0.5s;
+            animation: animate 30s linear infinite;
+        }
+        img {
+            border-radius: 56% 44% 32% 68% / 52% 24% 76% 48%;
+        }
+        .content {
+            .Sone {
+                background-image: url('/wp-content/themes/lemonlicious/images/bluedot1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 3;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Stwo {
+                background-image: url('/wp-content/themes/lemonlicious/images/blackstrip1.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 12rem;
+                height: 12rem;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            .Slem {
+                background-image: url('/wp-content/themes/lemonlicious/images/yellowlemon.png');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 7rem;
+                height: 9rem;
+                z-index: 3;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                display: block;
+                @include respond(phone) {
+                    width: 6rem;
+                    height: 8rem;
+                }
+            }
+        }
+    }
+}
+#local_market {
+    background-color: $light-grey;
+    padding-top: 10rem;
+    padding-bottom: 20rem;
+
+    .shapes {
+        position: relative;
+        width: 100%;
+
+        .blueblob {
+            position: absolute;
+            top: 10rem;
+            right: 0;
+            display: block;
+            z-index: 1;
+            @include respond(tablet) {
+                display: none;
+            }
+            img {    
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        margin-top: 3rem;
+        z-index: 5;
+        @include respond(tablet) {
+            flex-direction: column;
+        }
+
+        .singleevent {
+            display: flex;
+            flex-direction: column;
+            width: calc(33.3% - 1rem);
+            height: auto;
+            background: $white;
+            position: relative;
+            border-radius: 1rem;
+            box-shadow: 2px 2px 6px 1px $shadow;
+            color: $black;
+            margin-bottom: 2rem;
+            min-height: 42rem;
+            &:hover {
+                box-shadow: 3px 3px 3px 0px $hover-shadow;
+            }
+            @include respond(tablet) {
+                width: 50%
+            }
+            @include respond(phone) {
+                width: 100%
+            }
+
+            .date {
+                position: absolute;
+                top: 0;
+                left: 2rem;
+                background: $lemon;
+                width: 8rem;
+                height: 8rem;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                p {
+                    display: block;
+                    font-size: 2rem;
+                }
+            }
+
+            .innercontainer {
+                padding: 2rem;
+
+                .imager {
+                    width: 100%;
+                    display: block;
+
+                    img {
+                        height: 240px;
+                        display: block;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center top;
+                    }
+                }
+
+                h3 {
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.5rem;
+                }
+                .time, .address {
+                    color: $lime;
+                    font-size: 1.5rem;
+                }
+                .description {
+                    margin: 1.5rem 0rem;
+                    font-size: 1.3rem;
+                }
+                .read {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+#local_gallery {
+    position: relative;
+    margin-top: -10rem;
+
+    /* The Masonry Container */
+    .masonry {
+        margin: 1em auto;
+        max-width: inherit;
+        column-gap: 1em;
+    }
+    
+    /* The Masonry Brick */
+    .brick {
+        margin-bottom: 1em;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .masonry .brick img {
+        transition: all .5s ease-in-out;
+        backface-visibility: hidden;
+    }
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+    
+    /* Masonry on large screens */
+    @media only screen and (min-width: 1024px) {
+        .masonry {
+        column-count: 4;
+        }
+    }
+    
+    /* Masonry on medium-sized screens */
+    @media only screen and (max-width: 1023px) and (min-width: 768px) {
+        .masonry {
+        column-count: 3;
+        }
+    }
+    
+    /* Masonry on small screens */
+    @media only screen and (max-width: 767px) and (min-width: 540px) {
+        .masonry {
+        column-count: 2;
+        }
+    }
+}

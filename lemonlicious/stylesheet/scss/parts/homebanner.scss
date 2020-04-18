@@ -1,0 +1,73 @@
+#Hbanner {
+    height: 100vh;
+    width: 100%;
+    @include respond(phone) {
+        height: 80vh;
+    }
+    // padding-top: 8rem;
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include respond(large-laptop) {
+            padding-top: 10rem;
+        }
+        @include respond(laptop) {
+            padding: 10rem 0rem;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            @include respond(tablet) {
+                width: 100%;
+                padding: 0px 0px;
+            }
+            @include respond(laptop) {
+                padding: 0px 0px;
+            }
+            h1 {
+                text-align: left;
+                font-size: 5rem;
+                @include respond(tablet) {
+                    text-align: center;
+                    font-size: 3rem;
+                }
+                span {
+                    color: $white;
+                }
+                p {
+                    font-size: inherit;
+                }
+            }
+        }
+
+        .shapes {
+            position: relative;
+            @include respond(tablet) {
+                display: none;
+            }
+
+            img {
+                width: 80%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    .lime {
+        background-color: $lime;
+    }
+    .orange {
+        background-color: $orange;
+    }
+    .blue {
+        background-color: $blue;
+    }
+    .rasberry {
+        background-color: $rasberry;
+    }
+}
