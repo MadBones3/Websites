@@ -1,0 +1,42 @@
+/* Reset
+  =============== */
+
+// Reset box sizing to border box
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Remove figure margin
+figure {
+  margin: 0;
+}
+// list style
+.tabcontent,
+.content-flex,
+.panel {
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding-left: 1.3em;
+      display: flex;
+      &:before {
+        content: "\f069"; /* FontAwesome Unicode */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        display: inline-block;
+        margin-left: -1.3em; /* same as padding-left set on li */
+        width: 1.3em; /* same as padding-left set on li */
+        text-align: left;
+        -webkit-text-fill-color: #bada34;
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* Layout
+  =============== */
+.small-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+.medium-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+}
+.large-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 1600px) {
+  .large-wrapper {
+    max-width: 1400px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .large-wrapper {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .large-wrapper {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .large-wrapper {
+    max-width: 800px;
+  }
+}
+
+// 404
+#post-404 {
+  text-align: center;
+  .error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img.bicycle {
+    width: 15%;
+    margin: 0 50px;
+    pointer-events: none;
+    // animation-name: spin;
+    // animation-duration: 6000ms;
+    // animation-iteration-count: infinite;
+    // animation-timing-function: linear;
+    // transform-origin: center;
+    @media (max-width: 1000px) {
+      width: 25%;
+      margin: 0 10px;
+    }
+  }
+  span {
+    font-size: 15rem;
+    @media (min-width: 1500px) {
+      font-size: 20rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 8rem;
+    }
+  }
+  h2 a {
+    &:hover {
+      color: #a3be2e;
+      text-decoration: none;
+    }
+  }
+}

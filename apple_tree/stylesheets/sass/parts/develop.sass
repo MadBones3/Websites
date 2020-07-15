@@ -1,0 +1,140 @@
+.swiper-container
+    width: 100%
+    padding: 40px 0 !important
+    height: 100%
+    margin-top: -105px
+    @media (max-width: 1500px)
+        height: 400px !important
+    @media (max-width: 1000px)
+        margin-top: 0px
+        height: 100%
+#roots .swiper-container
+    @media (max-width: 1500px)
+        height: 400px
+        margin-top: -110px
+    @media (max-width: 1000px)
+        margin-top: 0px
+
+.swiper-slide
+    text-align: center
+    font-size: 18px
+    background: #fff
+    display: -webkit-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    -webkit-justify-content: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    -webkit-align-items: center
+    align-items: center
+.developSection
+    position: relative
+    margin-bottom: 200px
+    @media (max-width: 500px)
+        padding-bottom: 0px
+        margin-bottom: 150px
+    span.giantInspire
+        font-family: $heading-font-family
+        color: #b4d135
+        font-size: 12rem
+        opacity: 0.5
+        text-align: right
+        display: block
+        margin-top: -50px
+        margin-bottom: -130px
+        font-weight: 600
+        @media (max-width: 1500px)
+            font-size: 9rem
+            margin-top: 0
+            margin-bottom: 0
+        @media (max-width: 1000px)
+            font-size: 8rem
+            // margin-top: 0px
+            // margin-bottom: 0px
+            display: inline-block
+            width: 100%
+            text-align: start
+        @media (max-width: 500px)
+            font-size: 5rem
+    .swiper-slide
+        margin: auto
+        display: flex
+        // height: 450px
+        box-shadow: 5px 5px 20px #00000021
+        transition: 0.3s
+        // min-height: 467px
+        border-radius: 20px
+        min-height: 375px
+        transform: scale(1)
+        transition: all 0.5s ease-in-out
+        @media (max-width: 1500px)
+            min-height: 345px
+        &:hover
+            transform: scale(1.05)
+            z-index: 9999
+            cursor: pointer
+            background: $secondary-color
+            .servicesContent
+                h3
+                    transition: 0.3s
+                    color: #fff
+                p
+                    min-height: 170px
+        .servicesContent
+            padding: 0 30px
+            transition: all 0.5s ease-in
+            min-height: 295px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            @media (min-width: 1230px) and (max-width: 1430px)
+                padding: 20px 20px
+                min-height: 363px
+            h3
+                font-family: $font-family
+                color: $secondary-color
+                font-size: 26px
+            img
+                filter: grayscale(1)
+                max-width: 200px
+                width: 310px
+                height: 110px
+                object-fit: contain
+            hr
+                width: 50%
+                border: 1px solid #000
+                margin-bottom: 20px
+    // .swiper-wrapper
+    //     max-width: 1400px
+    //     width: 100%
+    //     margin: initial !important
+    .greyBack
+        background: #1b1b1b
+        position: absolute
+        height: 50%
+        width: 100%
+        left: 0
+        bottom: -100px
+        z-index: -1
+.swiper-pagination-bullet
+    background: #fff !important
+// .partners
+//     margin-top: 80px
+//     margin-bottom: 120px
+.swiper-pagination.white.swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+    @media (max-width: 1500px)
+        bottom: 0 !important
+.contactline
+    margin-top: 100px
+    @media (max-width: 500px)
+        margin-top: 50px
+.padmobile
+    @media (max-width: 1000px)
+        padding: 0 40px
+.developSection a:hover
+    text-decoration: none

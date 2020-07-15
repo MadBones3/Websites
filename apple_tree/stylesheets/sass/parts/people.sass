@@ -1,0 +1,62 @@
+.ourPeople 
+    padding-bottom: 100px
+    .stripe
+        padding: 40px
+        .large-wrapper
+            overflow: visible
+            .tribe-group
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                @media (max-width: 1000px)
+                    flex-direction: column
+
+                .people_image
+                    width: calc(30% - 60px)
+                    text-align: center
+                    // background: #fff
+                    // box-shadow: 0 0 20px #00000021
+                    padding: 30px 0 30px 0
+                    @media (min-width: 1200px) and (max-width: 1500px)
+                        width: calc(40% - 60px)
+                    @media (max-width: 1000px)
+                        width: 50%
+                        padding: 10px
+                    @media (max-width: 500px)
+                        width: 100%
+                    img
+                        object-fit: cover
+                        object-position: center
+                        height: 350px
+                        width: 350px
+                        border-radius: 51% 49% 56% 44% / 40% 37% 63% 60%
+                        @media (max-width: 1000px)
+                            height: 100%
+                            width: 100%
+                    p
+                        margin: 0
+                        padding: 0 2rem
+                .content
+                    width: calc(70% - 10px)
+                    @media (min-width: 1200px) and (max-width: 1500px)
+                        width: 60%
+                    @media (max-width: 1000px)
+                        width: 100%
+                        margin-top: 20px
+                    h3
+                        font-family: $heading-font-family
+                        color: #b4d135
+                        font-size: 3.8rem
+                        font-weight: 600
+                        opacity: 0.6
+                        margin: 0 0 10px 0
+                        @media (max-width: 500px)
+                            font-size: 2rem
+                    h4
+                        margin-bottom: 10px
+                        font-family: $font-family
+                        margin-top: 0
+                    p
+                        font-weight: 100
+    .stripe:nth-child(odd)
+        background: #eee
