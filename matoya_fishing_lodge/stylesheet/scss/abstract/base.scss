@@ -1,0 +1,247 @@
+// =============== Foundation ================== //
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+html {
+  margin: 0;
+  /* 1 rem is exactly the root font size --10px*/
+  /* Therefore 20px = 2rem */
+  /* default html size is 16px, we want 10px therefore 10/16 = 0.625. Therefore 62.5% */
+  font-size: 62.5%;
+
+  // media queries
+  @media (max-width: 1000px) {
+    // width < 1000
+    font-size: 50%; //1rem = 8px, 8/16 =50%
+  }
+
+  @media (max-width: 1200px) {
+    // width < 1200
+    font-size: 56.25%; //1rem = 9px, 9/16 =56.25%
+  }
+}
+// global classes
+main.dark {
+  background-color: #161616;
+}
+main.light {
+  background-color: $white;
+}
+.txtcenter {
+  text-align: center;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.blackswipe {
+  position: relative;
+  background-size: cover;
+  height: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+}
+.whitestripe {
+  position: relative;
+  background-size: cover;
+  height: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  position: relative;
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  width: 1600px;
+  @media (max-width: 1000px) {
+    width: 1000px;
+  }
+  @media (max-width: 1500px) {
+    width: 1200px;
+  }
+}
+.belowbanner {
+  width: 100%;
+  margin-top: -200px;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 1500px) {
+    margin-top: -140px;
+  }
+}
+.padtop200 {
+  padding-top: 200px;
+}
+.padbot150 {
+  padding-bottom: 150px;
+}
+// END global classes
+
+h1 {
+  font-size: 7rem;
+  @media (max-width: 1500px) {
+    font-size: 6rem;
+  }
+}
+h2 {
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  @media (max-width: 1500px) {
+    font-size: 4.2rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 3.9rem;
+  }
+}
+h3 {
+  font-size: 4.5rem;
+  @media (max-width: 1500px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 3.7rem;
+  }
+}
+h4 {
+  font-size: 3rem;
+  @media (max-width: 1500px) {
+    font-size: 2.6rem;
+  }
+}
+h5 {
+  font-size: 2rem;
+}
+p,
+li {
+  font-size: 1.6rem;
+}
+a {
+  color: $btn-main;
+}
+
+// =============== Swiper ================== //
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#cards .swiper-button-next {
+  top: 65%;
+}
+#cards .swiper-button-prev {
+  top: 65%;
+}
+#environment .swiper-button-next {
+  color: $white;
+}
+#environment .swiper-button-prev {
+  color: $white;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  color: #d0d0d070;
+  border-radius: 20px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 30px;
+  font-weight: 900;
+}
+.swiper-button-next:after {
+  content: "\f138";
+}
+.swiper-button-prev:after {
+  content: "\f137";
+}
+.custom-dots {
+  width: 100%;
+  padding: 30px 0;
+  span.swiper-pagination-bullet {
+    margin: 0px 5px;
+    width: 15px;
+    height: 15px;
+    background-color: gray;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: $btn-main !important;
+  }
+}
+.custom-dots span.swiper-pagination-bullet:focus {
+  outline: none;
+  box-shadow: 0 0 0pt 2pt #b74530;
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  box-shadow: 0 0 0px 2px transparent;
+  outline: none;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+}
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1 !important;
+}
+// =============== Gravity Forms ================== //
+.gform_wrapper {
+  .validation_error {
+    color: $error !important;
+    font-size: 1.4rem !important;
+    border-top: 2px solid $error !important;
+    border-bottom: 2px solid $error !important;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+  .validation_message {
+    color: $error !important;
+    font-size: 1.2rem !important;
+  }
+}
+.gform_body {
+  font-size: 1.2rem;
+}

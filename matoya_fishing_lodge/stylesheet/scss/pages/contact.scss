@@ -1,0 +1,127 @@
+#contact {
+  .content {
+    padding-top: 200px;
+    @media (max-width: 1000px) {
+      padding-top: 100px;
+    }
+    h2 {
+      color: $btn-main;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+      &::before,
+      &::after {
+        content: "";
+        background-color: $btn-main;
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+      &::before {
+        right: 0.5em;
+        margin-left: -50%;
+      }
+      &::after {
+        left: 0.5em;
+        margin-right: -50%;
+      }
+    }
+    h4 {
+      margin: 0;
+      color: $white;
+      text-align: center;
+    }
+    .dets {
+      color: $white;
+    }
+    .flex {
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+      .contact-content,
+      .social-contact {
+        background: transparent;
+        border: 3px solid $btn-main;
+        min-height: 350px;
+        padding: 3rem;
+      }
+      .social-contact {
+        width: calc(30% - 50px);
+        @media (max-width: 1500px) {
+          width: calc(30% - 20px);
+        }
+        @media (max-width: 1000px) {
+          width: 100%;
+          min-height: auto;
+        }
+        .soicons {
+          padding: 10px 0px;
+          display: flex;
+          flex-direction: column;
+          a {
+            font-size: 3rem;
+            background: $white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            margin: 5px 0;
+            transition: all 0.3s ease-in;
+            color: $black;
+            position: relative;
+            &::after {
+              position: absolute;
+              top: 0;
+              left: 50px;
+              right: 0;
+              color: $white;
+              font-size: 2rem;
+            }
+            &:hover {
+              background: transparent;
+              color: $white;
+            }
+          }
+          a.icon1::after {
+            content: "Facebook";
+          }
+          a.icon2::after {
+            content: "Instagram";
+          }
+          a.icon3::after {
+            content: "LinkedIn";
+          }
+          a.icon4::after {
+            content: "WhatsApp";
+          }
+        }
+      }
+      .contact-content {
+        width: calc(70% - 50px);
+        @media (max-width: 1500px) {
+          width: calc(70% - 20px);
+        }
+        @media (max-width: 1000px) {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+      h3 {
+        margin: 0;
+        color: $white;
+        font-size: 4rem;
+        @media (max-width: 1500px) {
+          font-size: 3.1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+#gallerySection {
+  .whitestripe {
+    height: 100px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 2;
+  }
+  .padtop200 {
+    padding-top: 280px;
+    @media (max-width: 150px) {
+      padding-top: 200px;
+    }
+    @media (max-width: 700px) {
+      padding-top: 100px;
+    }
+  }
+  .w3-bar.w3-black {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
+    button {
+      margin: 5px;
+      font-size: 20px;
+      text-transform: uppercase;
+      background: $btn-main;
+      color: $white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      border: 3px solid $btn-main;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        background: $white;
+        color: $btn-main;
+        a {
+          color: $btn-main;
+          text-decoration: none;
+        }
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    button:focus {
+      background: $white;
+      color: $btn-main;
+      outline: 0;
+      a {
+        color: $btn-main;
+        text-decoration: none;
+      }
+    }
+  }
+  .tab {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    h3 {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .vid {
+      width: calc(33% - 20px);
+      margin-bottom: 40px;
+      @media (max-width: 1000px) {
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+      @media (max-width: 500px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      iframe {
+        width: 100%;
+        display: block;
+        height: 400px;
+        background: $btn-main;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-radius: 20px;
+      }
+    }
+    .image {
+      margin-bottom: 40px;
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        @media (max-width: 1000px) {
+          margin: 0 5px;
+        }
+        .thumbnail {
+          width: 25%;
+          height: 400px;
+          position: relative;
+          @media (max-width: 1500px) {
+            height: 300px;
+          }
+          @media (max-width: 1000px) {
+            width: 50%;
+          }
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+          img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        .thumbnail:hover::before {
+          content: "\f00e";
+          background-color: #0a0a0a78;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 600;
+          font-size: 50px;
+          color: $white;
+          text-align: center;
+          line-height: 400px;
+        }
+      }
+    }
+  }
+}
+#coupon {
+  .greystripe {
+    position: relative;
+    background-size: cover;
+    height: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .fishtube {
+    padding: 100px 0;
+    text-align: center;
+    h3 {
+      margin-bottom: 0;
+    }
+    h4 {
+      margin-top: 0;
+      font-style: italic;
+    }
+  }
+}
+.fg-default.fg-left {
+  @media (max-width: 500px) {
+    text-align: center;
+    margin: auto;
+  }
+}
+nav.fg-paging-container {
+  left: 0;
+  margin: auto;
+  background: transparent;
+  position: relative;
+  top: 0;
+  height: auto;
+}

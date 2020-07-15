@@ -1,0 +1,196 @@
+#package {
+  .pack-content {
+    position: relative;
+    h2 {
+      color: $btn-main;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 0;
+      &::before,
+      &::after {
+        content: "";
+        background-color: $btn-main;
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+      &::before {
+        right: 0.5em;
+        margin-left: -50%;
+      }
+      &::after {
+        left: 0.5em;
+        margin-right: -50%;
+      }
+    }
+    .txt {
+      color: $white;
+      @media (max-width: 700px) {
+        padding: 0rem 2rem;
+      }
+    }
+  }
+  .package-flex {
+    position: relative;
+    .package-contain {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      position: relative;
+      margin: 80px 0;
+      @media (max-width: 700px) {
+        flex-direction: column;
+      }
+      .image {
+        width: 50%;
+        position: relative;
+        @media (max-width: 1500px) {
+          width: 40%;
+        }
+        @media (max-width: 1000px) {
+          width: 80%;
+        }
+        @media (max-width: 700px) {
+          width: 100%;
+        }
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 600px;
+          width: 100%;
+          @media (max-width: 700px) {
+            height: auto;
+            object-fit: contain;
+          }
+        }
+      }
+      .package-content {
+        position: absolute;
+        right: 50px;
+        top: 30px;
+        width: 50%;
+        border: 5px solid $btn-main;
+        padding: 3rem 5rem;
+        @media (max-width: 1500px) {
+          right: 30px;
+          top: 20px;
+          width: 60%;
+          padding: 3rem 3rem;
+        }
+        @media (max-width: 1000px) {
+          right: 0;
+          top: 40px;
+          width: 80%;
+          padding: 3rem 3rem;
+          background: #00000085;
+          filter: drop-shadow(5px 2px 6px #000000b8);
+        }
+        @media (max-width: 700px) {
+          position: relative;
+          top: 0;
+          right: 0;
+          width: 100%;
+          filter: none;
+          padding: 2rem 2rem;
+        }
+        h3 {
+          margin-top: 0;
+          margin-bottom: 0;
+          text-transform: uppercase;
+          padding: 0 2rem;
+          color: $btn-main;
+          @media (max-width: 700px) {
+            padding: 0;
+          }
+          p {
+            font-size: inherit;
+            color: inherit;
+            margin: 0;
+          }
+        }
+        h4 {
+          margin: 0;
+        }
+        .content {
+          padding: 0 2rem;
+          color: $white;
+          @media (max-width: 700px) {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.belowbanner {
+  @media (max-width: 1500px) {
+    margin-top: -190px;
+  }
+}
+#date {
+  overflow: hidden;
+  margin-top: -$margintop;
+  z-index: 2;
+  position: relative;
+  .whitestripe {
+    padding-bottom: 80px;
+  }
+  .duration-content {
+    padding: 50px 0;
+    h3 {
+      margin-bottom: 0;
+      text-align: center;
+    }
+    .txt {
+      @media (max-width: 700px) {
+        padding: 0rem 2rem;
+      }
+    }
+  }
+  .duration-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    // background: #bdbdbd75;
+    .date,
+    .spaces {
+      width: 100%;
+    }
+    h4 {
+      font-size: 3rem;
+      margin: 0;
+      color: $white;
+      background: $btn-main;
+    }
+    .duration-flex {
+      display: flex;
+      justify-content: center;
+      border-top: 2px solid;
+      min-height: 70px;
+      align-items: center;
+    }
+    .date .duration-flex {
+      border-right: 2px solid;
+    }
+  }
+  .row1,
+  .row3,
+  .row5,
+  .row7,
+  .row9 {
+    background: $white;
+  }
+  .row2,
+  .row4,
+  .row6,
+  .row8,
+  .row10 {
+    background: #f9e5e2;
+  }
+}

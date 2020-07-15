@@ -1,0 +1,29 @@
+#searchpg {
+  margin: 150px 0px;
+  .content {
+    .search-title {
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      li {
+        min-height: 250px;
+        padding: 1rem 2rem;
+        border: 3px solid $btn-main;
+        text-align: center;
+        margin-bottom: 50px;
+        h3 {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

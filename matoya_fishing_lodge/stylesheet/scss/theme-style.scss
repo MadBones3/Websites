@@ -1,0 +1,25 @@
+// abstracts
+@import "abstract/varables";
+@import "abstract/animations";
+@import "abstract/base";
+
+// Components
+@import "components/button";
+@import "components/header";
+@import "components/footer";
+@import "components/homebanner";
+@import "components/herobanner";
+@import "components/404";
+@import "components/search";
+
+// Pages
+@import "pages/home";
+@import "pages/fishingOpportunities";
+@import "pages/contact";
+@import "pages/location";
+@import "pages/gallery";
+@import "pages/package";
+@import "pages/accommodation";
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");

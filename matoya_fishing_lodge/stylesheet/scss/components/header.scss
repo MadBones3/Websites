@@ -1,0 +1,335 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99999;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 1000px) {
+    background: $nav-color;
+  }
+}
+.headtop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
+  height: $headerheight;
+  @media (max-width: 1000px) {
+    padding: 0 20px;
+  }
+}
+header.sticky {
+  background: $nav-color;
+  background-image: url("http://kstest.co.za/matoyafl/wp-content/uploads/2020/06/black_header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 3px 6px #0000007a;
+  @media (max-width: 1000px) {
+    background: $nav-color;
+  }
+}
+header.sticky .headtop {
+  height: 80px;
+}
+header.sticky .headtop .logo img {
+  width: 160px;
+}
+header.sticky .headtop nav {
+  @media (max-width: 1000px) {
+    top: 80px;
+  }
+}
+header.sticky nav #acrb-menu ul li a {
+  color: $white;
+}
+header.sticky nav #acrb-menu ul li ul {
+  background: $nav-color;
+  @media (max-width: 1000px) {
+    background: $nav-ul;
+  }
+}
+header.sticky nav #acrb-menu ul li.menu-item-has-children::before {
+  color: $white;
+}
+.logo img {
+  width: 190px;
+  transition: all 0.5s ease;
+  // @media (max-width: 1000px) {
+  //   width: 200px;
+  // }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1000px) {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: $nav-color;
+    top: 110px;
+    left: -100%;
+    transition: all 0.5s ease;
+  }
+  #acrb-menu {
+    width: auto;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 1000px) {
+        display: block;
+        text-align: center;
+      }
+      li {
+        font-size: 16px;
+        list-style: none;
+        position: relative;
+        margin: auto;
+        ul {
+          position: absolute;
+          left: 0;
+          background: $nav-color;
+          display: none;
+          @media (max-width: 1000px) {
+            position: relative;
+            background: $nav-ul;
+            visibility: hidden;
+            height: 0;
+          }
+          li {
+            display: block;
+            width: 250px;
+            @media (max-width: 1000px) {
+              width: 100%;
+            }
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+        a {
+          text-decoration: none;
+          line-height: 50px;
+          padding: 0 20px;
+          display: block;
+          color: $black;
+          font-weight: 600;
+          text-transform: uppercase;
+          &:hover,
+          &:focus,
+          .active {
+            color: $btn-main;
+            background: transparent;
+          }
+          @media (max-width: 1000px) {
+            color: $white;
+          }
+        }
+      }
+    }
+    ul li.menuIcon {
+      @media (max-width: 1000px) {
+        display: inline-block;
+      }
+    }
+    ul li.menuIcon a {
+      font-size: 2rem;
+      background: #444444;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      text-align: center;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease-in;
+      color: $white;
+      font-weight: 300;
+      padding: 0px 10px;
+      &:hover {
+        background: $btn-main;
+        color: $white !important;
+      }
+    }
+  }
+}
+.open-me {
+  height: auto !important;
+  visibility: visible !important;
+}
+nav #acrb-menu ul li.current-menu-item a {
+  color: $btn-main !important;
+  border-bottom: 2px solid $btn-main !important;
+}
+nav #acrb-menu ul li.menu-item-has-children ul li a {
+  color: $white;
+}
+nav.active {
+  @media (max-width: 1000px) {
+    left: 0;
+  }
+}
+nav #acrb-menu ul li:not(.menu-item-has-children) a {
+  border-bottom: 2px solid transparent;
+}
+nav #acrb-menu ul li:not(.menu-item-has-children) a:hover {
+  color: $btn-main;
+  border-bottom: 2px solid $btn-main;
+}
+nav #acrb-menu ul li.menu-item-has-children::before {
+  content: "\f078";
+  position: absolute;
+  line-height: 50px;
+  color: $black;
+  right: 0px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 16px;
+  @media (max-width: 1000px) {
+    color: $white;
+  }
+}
+nav #acrb-menu ul li.menu-item-has-children.active::before {
+  content: "\f077";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 16px;
+  @media (max-width: 1000px) {
+    color: $white;
+  }
+}
+
+nav.active #acrb-menu {
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+  }
+}
+
+// Hamburger
+.burger {
+  display: none;
+  cursor: pointer;
+  @media (max-width: 1000px) {
+    display: block;
+    background: transparent;
+  }
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+nav #acrb-menu ul li ul {
+  @media (max-width: 1000px) {
+    display: block !important;
+  }
+}
+// search popup
+.overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.overlay-content {
+  position: relative;
+  top: 46%;
+  width: 80%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.overlay .closebtn:hover {
+  color: $btn-main;
+}
+
+.overlay input[type="text"] {
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  float: left;
+  width: 80%;
+  background: white;
+}
+
+.overlay input[type="text"]:hover {
+  background: #f1f1f1;
+}
+
+nav #acrb-menu ul li.menuSearchIcon a {
+  line-height: 0;
+  padding: 0;
+  border-bottom: 2px solid transparent !important;
+}
+button.openBtn {
+  background: transparent;
+  border: 0;
+  font-size: 1.7rem;
+  background: #292929;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease-in;
+  color: #ffffff;
+  font-weight: 300;
+  padding: 0px 10px;
+  cursor: pointer;
+  &:hover {
+    background: $btn-main;
+    color: $white !important;
+  }
+}
+form.search {
+  display: flex;
+  justify-content: space-evenly;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  input.search-input {
+    width: 80%;
+    border-radius: 10px;
+    @media (max-width: 1000px) {
+      width: 100%;
+      padding: 2rem 5rem;
+      margin-bottom: 10px;
+    }
+  }
+}

@@ -1,0 +1,263 @@
+#footer {
+  #subform {
+    background-image: url("http://kstest.co.za/matoyafl/wp-content/themes/matoya_fishing_lodge/img/formbg.png");
+    // background-color: $footer3;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40px;
+    z-index: 1;
+    @media (max-width: 1000px) {
+      padding: $mobilePad;
+      background-position: left;
+    }
+  }
+  .foot-bg {
+    background-image: url("http://kstest.co.za/matoyafl/wp-content/themes/matoya_fishing_lodge/img/MFL-grey3.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 5rem;
+    z-index: 2;
+    margin-top: $gformfoot;
+    position: relative;
+    @media (max-width: 500px) {
+      background-image: none;
+      background-color: $footer1;
+      margin-top: 0;
+    }
+  }
+  // above footer
+  .form-container {
+    text-align: center;
+    padding: 6rem 0;
+    h2 {
+      color: $white;
+      margin-top: 0;
+    }
+    h3 {
+      color: $btn-main;
+      text-transform: uppercase;
+    }
+    .form-desc {
+      color: $white;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  //the footer
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 50px 0;
+    @media (max-width: 1500px) {
+      justify-content: space-evenly;
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+    }
+    .block {
+      min-height: 300px;
+      padding: 1rem;
+      @media (max-width: 1000px) {
+        min-height: auto;
+      }
+      h3 {
+        text-transform: uppercase;
+        margin: 0 0 1rem 0;
+        color: $white;
+        font-weight: 100;
+        font-size: 2.5rem;
+      }
+      .contdets {
+        color: $white;
+        h3,
+        h4,
+        h5 {
+          margin: 1rem 0;
+          color: inherit;
+        }
+        p {
+          margin: 1rem 1rem;
+          color: inherit;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            color: $footer-hover;
+          }
+        }
+      }
+      .soicons {
+        a {
+          font-size: 2rem;
+          background: #fff;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          display: inline-block;
+          text-align: center;
+          vertical-align: middle;
+          margin: 0 0.5rem;
+          transition: all 0.3s ease-in;
+          color: $black;
+          &:hover {
+            background: transparent;
+            color: $white;
+          }
+        }
+      }
+      #acrb-ql-menu {
+        ul {
+          margin: 0;
+          padding: 0;
+          li {
+            list-style: none;
+            padding: 0.5rem 0;
+            a {
+              font-size: 1.5rem;
+              text-decoration: none;
+              color: $white;
+              &:hover,
+              &:focus {
+                color: $footer-hover;
+                border-bottom: 2px solid $btn-main;
+              }
+            }
+          }
+          li.current-menu-item a {
+            color: $footer-hover;
+            border-bottom: 2px solid $btn-main;
+          }
+        }
+      }
+    }
+    .wid20 {
+      width: calc(20% - 20px);
+      @media (max-width: 1500px) {
+        width: auto;
+      }
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+    .wid40 {
+      width: calc(40% - 20px);
+      @media (max-width: 1500px) {
+        width: auto;
+      }
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+  }
+  .copyRight {
+    background: $footer2;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+}
+#the-form {
+  .gform_wrapper
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]),
+  .gform_wrapper textarea.medium {
+    color: $white;
+    background-color: transparent;
+    border: 2px solid $white;
+  }
+  .gform_wrapper label.gfield_label,
+  .gform_wrapper legend.gfield_label {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .gform_wrapper .gfield_required {
+    display: none;
+  }
+  .gform_wrapper .gform_footer {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    .gform_button {
+      position: relative;
+      color: #fff;
+      padding: 1rem 5rem;
+      font-size: 20px;
+      background: $btn-main;
+      border: 3px solid transparent;
+      border-radius: 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 0 20px #00000047;
+      transition: all 0.3s ease;
+      &:hover {
+        border: none;
+        border: 3px solid $btn-main;
+        transition: all 0.5s ease;
+        background-color: $white;
+        color: $btn-main;
+      }
+      @media (max-width: 1000px) {
+        font-size: 16px;
+        padding: 10px 80px;
+      }
+    }
+  }
+}
+#newsletter {
+  .gform_wrapper {
+    margin: 0;
+  }
+  .gform_wrapper form {
+    @media (max-width: 1000px) {
+      text-align: center;
+    }
+  }
+  .gform_wrapper ul li.gfield {
+    margin-top: 0;
+  }
+  .gform_wrapper .top_label div.ginput_container {
+    margin-top: 0;
+  }
+  .gform_wrapper
+    input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="button"]):not([type="image"]):not([type="file"]) {
+    padding: 1rem;
+  }
+  .gform_wrapper .top_label input.medium,
+  .gform_wrapper .top_label select.medium {
+    width: calc(70% - 8px);
+    @media (max-width: 1500px) {
+      width: 100%;
+    }
+  }
+  .gform_wrapper .gform_footer {
+    margin: 0;
+  }
+  .gform_wrapper input#gform_submit_button_1 {
+    display: inline-block;
+    padding: 1rem 5rem;
+    color: $white;
+    background: $btn-main;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .gform_wrapper input#gform_submit_button_1:hover {
+    border: 3px solid $btn-main;
+    transition: all 0.5s ease;
+    background-color: $white;
+    color: $btn-main;
+  }
+}

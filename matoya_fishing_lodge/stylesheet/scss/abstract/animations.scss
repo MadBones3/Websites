@@ -1,0 +1,43 @@
+/* 
+==========================
+ScrollMagic classes
+==========================
+*/
+// Fade up
+.magic {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease-in-out;
+}
+.magic.fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+// Fade left
+.magic-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1s ease-in-out;
+}
+.magic-left.fade-in-left {
+  opacity: 1;
+  transform: translateX(0px);
+}
+// Fade Right
+.magic-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 1s ease-in-out;
+}
+.magic-right.fade-in-right {
+  opacity: 1;
+  transform: translateX(0px);
+}
+// appear in
+.magic-appear {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.magic-appear.fade-appear {
+  opacity: 1;
+}
