@@ -1,0 +1,71 @@
+// #searchpg {
+//   .search-container {
+//     display: flex;
+//     justify-content: space-evenly;
+//     flex-wrap: wrap;
+//     align-items: baseline;
+//     .single-search {
+//       width: calc(25% - 20px);
+//       margin-bottom: 20px;
+//       @media (max-width: 1500px) {
+//         width: calc(33.3% - 20px);
+//       }
+//       @media (max-width: 1000px) {
+//         width: calc(50% - 20px);
+//       }
+//       @media (max-width: 600px) {
+//         width: calc(100% - 20px);
+//       }
+//     }
+//   }
+//   .search-paginate {
+//     text-align: center;
+//     padding: 20px 0;
+//     font-size: 1.6rem;
+//   }
+// }
+#search-wrap {
+  width: 100%;
+  position: relative;
+  .full.post {
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: left;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    .post-featured-image {
+      width: 100px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px;
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+    .post-excerpt {
+      width: auto;
+      display: inline-block;
+      vertical-align: middle;
+      h2 {
+        font-size: 26px;
+        line-height: 30px;
+        margin: 0 0 10px 0;
+        span {
+          font-size: 16px;
+          text-transform: uppercase;
+          width: 100%;
+          clear: both;
+          display: block;
+          line-height: 16px;
+          margin-bottom: 5px;
+        }
+      }
+      .post-readmore {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+#career {
+  .four-blocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width: 500px) {
+      justify-content: center;
+    }
+    .block {
+      width: calc(50% - 30px);
+      height: 400px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      text-decoration: none;
+      margin-top: 50px;
+      transition: all 0.3s ease-in-out;
+      @media (max-width: 500px) {
+        width: calc(100% - 30px);
+        height: 300px;
+      }
+      &:hover {
+        transform: translateY(-5px);
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: #0000006e;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+      }
+      h3 {
+        z-index: 2;
+        position: relative;
+        color: $white;
+        margin: 0;
+        overflow: hidden;
+        border-radius: 2px;
+        border: 3px solid;
+        padding: 10px 20px;
+      }
+    }
+  }
+  .pharse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    overflow: hidden;
+    @media (max-width: 500px) {
+      flex-direction: column;
+      padding: 50px 0;
+      margin: 0;
+    }
+    i {
+      font-size: 4em;
+      color: $navy;
+    }
+    .fa-arrow-up {
+      animation: t2d 3s infinite alternate;
+      display: none;
+      @media (max-width: 500px) {
+        display: block;
+      }
+    }
+    .fa-arrow-right {
+      animation: r2l 3s infinite alternate;
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+    .fa-arrow-left {
+      animation: l2r 3s infinite alternate;
+      @media (max-width: 500px) {
+        display: none;
+      }
+    }
+    .fa-arrow-down {
+      animation: d2t 3s infinite alternate;
+      display: none;
+      @media (max-width: 500px) {
+        display: block;
+      }
+    }
+    .the-pharse {
+      margin: 0 30px;
+      p {
+        font-size: 3em;
+        line-height: 1.2;
+      }
+    }
+  }
+}

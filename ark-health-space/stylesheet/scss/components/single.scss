@@ -1,0 +1,15 @@
+#single {
+  margin: 50px 0;
+  @media (max-width: 1000px) {
+    padding: 0 15px;
+  }
+  .wp-block-image img {
+    height: auto;
+    object-fit: contain;
+  }
+}
+.single .banner-text h1 {
+  @media (max-width: 500px) {
+    font-size: 4rem;
+  }
+}

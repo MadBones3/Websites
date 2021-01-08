@@ -1,0 +1,173 @@
+#cv {
+  position: relative;
+  overflow: hidden;
+  .cvTop {
+    margin-bottom: 100px;
+    @media (max-width: 600px) {
+      margin-bottom: 0px;
+    }
+    .cv--container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 1000px) {
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+      .cv--contarea {
+        position: relative;
+        width: calc(50% - 50px);
+        @media (max-width: 1000px) {
+          width: calc(100% - 20px);
+        }
+        h3 {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            border: 2px solid $green;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+          }
+        }
+      }
+      .cv--img {
+        width: 50%;
+        margin-top: 50px;
+        @media (max-width: 1000px) {
+          width: 100%;
+          margin-top: 0;
+        }
+        img.element1 {
+          position: absolute;
+          top: -50px;
+          right: -100px;
+          width: 300px;
+          height: auto;
+          @media (max-width: 1500px) {
+            top: -20px;
+            right: -40px;
+            width: 170px;
+          }
+          @media (max-width: 1000px) {
+            top: -20px;
+            right: 0px;
+            width: 140px;
+          }
+          @media (max-width: 600px) {
+            top: -200px;
+            right: 0px;
+            width: 300px;
+            opacity: 0.1;
+          }
+        }
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 500px;
+          width: 100%;
+          @media (max-width: 1000px) {
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+  .cvGal {
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      a.thumbnail {
+        width: 25%;
+        position: relative;
+        @media (max-width: 1000px) {
+          width: 50%;
+        }
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 400px;
+          @media (max-width: 1000px) {
+            height: 300px;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      a.thumbnail:hover::before {
+        content: "\f00e";
+        background-color: #0a0a0a78;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 600;
+        font-size: 50px;
+        color: $white;
+        text-align: center;
+        line-height: 400px;
+      }
+    }
+  }
+  // form
+  .beige {
+    background: $beige;
+    .wrapper {
+      width: 1000px;
+    }
+  }
+  .cont-form {
+    margin: 80px 0 0;
+    padding: 20px 0;
+    @media (max-width: 1000px) {
+      padding: 10px 20px;
+      margin: 50px 0;
+    }
+    h3 {
+      margin: 0 0 5px 0;
+      text-align: center;
+      @media (max-width: 500px) {
+        margin-top: 10px;
+      }
+    }
+  }
+  div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+  div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+  div.wpforms-container-full
+    .wpforms-form
+    .wpforms-field-row.wpforms-field-medium {
+    max-width: 100%;
+  }
+  textarea,
+  input,
+  select,
+  button {
+    font: inherit;
+    font-size: initial;
+  }
+  .wpforms-submit-container button {
+    display: inline-block;
+    padding: 10px 50px !important;
+    font-size: 18px !important;
+    background: $white;
+    color: $black;
+    border: 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+}

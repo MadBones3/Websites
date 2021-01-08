@@ -1,0 +1,35 @@
+// base
+@import "base/varables";
+@import "base/base";
+@import "base/animations";
+@import "base/mixin";
+
+// Components
+@import "components/header";
+@import "components/footer";
+@import "components/archive";
+@import "components/single";
+@import "components/page";
+@import "components/quote";
+@import "components/error";
+@import "components/woo";
+
+// Pages
+@import "pages/home";
+@import "pages/search";
+@import "pages/about";
+@import "pages/career";
+@import "pages/faq";
+@import "pages/contact";
+@import "pages/counsel";
+@import "pages/linkedin";
+@import "pages/career-default";
+
+// Parts
+@import "parts/top-logo";
+@import "parts/reviews";
+@import "parts/banner";
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");

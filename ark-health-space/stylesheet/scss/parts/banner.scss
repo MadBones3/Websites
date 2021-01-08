@@ -1,0 +1,213 @@
+.hbanner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: inherit;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+  &-block {
+    background: #5b745f78;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: 500px) {
+      padding: 50px 10px;
+    }
+    span:nth-child(1) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to right, $green, $beige);
+      animation: animate1 4s linear infinite;
+      animation-delay: 2s;
+    }
+    span:nth-child(2) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, $green, $beige);
+      animation: animate2 4s linear infinite;
+    }
+    span:nth-child(3) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(to left, $green, $beige);
+      animation: animate3 4s linear infinite;
+      animation-delay: 2s;
+    }
+    span:nth-child(4) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to top, $green, $beige);
+      animation: animate4 4s linear infinite;
+    }
+  }
+}
+.banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1313136b;
+    z-index: 1;
+  }
+  &-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    position: relative;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      color: inherit;
+    }
+  }
+}
+.nobanner {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @media (max-width: 350px) {
+    height: 20vh;
+  }
+  .element1 {
+    position: absolute;
+    top: 80px;
+    left: 350px;
+    width: 400px;
+    height: auto;
+    opacity: 0.5;
+    z-index: 1;
+    @media (max-width: 1500px) {
+      top: 60px;
+      left: 150px;
+      width: 350px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .element2 {
+    position: absolute;
+    top: 80px;
+    right: 350px;
+    width: 200px;
+    height: auto;
+    opacity: 1;
+    @media (max-width: 1500px) {
+      top: 60px;
+      right: 150px;
+      width: 170px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .catebanner {
+    position: absolute;
+    top: 80px;
+    left: 350px;
+    width: 200px;
+    height: auto;
+    opacity: 1;
+    @media (max-width: 1500px) {
+      top: 60px;
+      left: 150px;
+      width: 170px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  .ele-leaves {
+    position: absolute;
+    right: 0px;
+    left: 0;
+    width: auto;
+    height: 300px;
+    object-position: center;
+    object-fit: cover;
+    transform: rotate(156deg);
+    margin: auto;
+    bottom: -60px;
+    top: 0;
+    opacity: 0.2;
+    @media (max-width: 1500px) {
+      height: 220px;
+    }
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  h1 {
+    color: $black;
+    text-transform: uppercase;
+    font-size: 6rem;
+    z-index: 2;
+    @media (max-width: 1000px) {
+      text-align: center;
+    }
+    @media (max-width: 350px) {
+      font-size: 4rem;
+      margin-top: 50px;
+    }
+  }
+}

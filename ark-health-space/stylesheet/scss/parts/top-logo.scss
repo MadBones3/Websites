@@ -1,0 +1,11 @@
+#thelogo {
+  position: relative;
+  margin-top: $header-top;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+  .logo {
+    display: block;
+    text-align: center;
+  }
+}

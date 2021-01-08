@@ -1,0 +1,119 @@
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $beige;
+  padding: 100px 0;
+  @media (max-width: 600px) {
+    padding: 50px 0;
+  }
+}
+
+.accordian {
+  width: 100%;
+  background: $white;
+  padding: 40px;
+  box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.09);
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.accordian .drop-title {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+ul.accordian-list.accordian-drop {
+  list-style: none;
+  @media (max-width: 500px) {
+    padding: 0 0 0 5px;
+  }
+}
+ul.menu-text {
+  list-style: none;
+  @media (max-width: 500px) {
+    padding: 0 0 0 5px;
+  }
+}
+
+.accordian li .drop-title {
+  position: relative;
+}
+
+.accordian li:last-child .drop-title {
+  border-bottom: 0;
+}
+
+.accordian li span {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f7f7f7;
+  transition: all 0.3s ease;
+  @media (max-width: 500px) {
+    top: auto;
+    bottom: 0;
+    background: #f7f7f759;
+  }
+}
+
+.accordian li span i {
+  position: relative;
+  right: -7px;
+  line-height: 30px;
+  transition: all 0.3s ease;
+}
+
+.accordian li.default .menu-text {
+  display: none;
+}
+
+.menu-text li {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f7f7f7;
+  color: #818181;
+}
+.accordian .drop-title h5 {
+  margin: 0;
+}
+/* open */
+
+.accordian .open .drop-title h5 {
+  color: $green;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.accordian .open .drop-title {
+  border: none;
+}
+
+.accordian li.open i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.accordian li.default.open .menu-text {
+  display: block;
+}
+
+.accordian li.open span {
+  background: $green;
+  color: $white;
+  @media (max-width: 500px) {
+    background: #5b745f4d;
+  }
+}

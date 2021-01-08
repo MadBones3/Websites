@@ -1,0 +1,319 @@
+//remove #wpadminbar when finished header
+#wpadminbar {
+  display: none;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99999;
+  background: $white;
+  // border-top: 6px solid $green;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 1000px) {
+    background: $white;
+  }
+}
+header.sticky {
+  box-shadow: 0 0 6px #00000059;
+  background: $green;
+  @media (max-width: 1000px) {
+    background: $white;
+  }
+}
+header.sticky nav.topnav {
+  height: 70px;
+  @media (max-width: 1000px) {
+    height: 100vh;
+  }
+  @media (max-width: 500px) {
+    height: calc(100vh - 80px);
+  }
+}
+header.sticky nav.topnav #acrb-menu ul li > a {
+  color: $white;
+}
+header.sticky nav.topnav #acrb-menu ul li ul.sub-menu {
+  background: $green;
+}
+header.sticky nav.topnav #acrb-menu ul li.current-menu-item a::after {
+  background: $white;
+}
+header.sticky nav.topnav #acrb-menu ul li a:hover::after {
+  background: $white;
+}
+header.sticky nav.topnav .search-bar {
+  border: 2px solid $white;
+}
+header.sticky nav.topnav .search-bar .search-bar__submit i.fas.fa-search {
+  color: $white;
+}
+header.sticky .headtop .logo a {
+  color: $white;
+  @media (max-width: 1000px) {
+    color: $black;
+  }
+}
+.headtop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.5s ease;
+  height: auto;
+  padding: 0 20px;
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    height: auto;
+    padding: 0 20px;
+  }
+  @media (max-width: 500px) {
+    padding: 20px 10px;
+  }
+}
+.logo {
+  // display: none;
+  @media (max-width: 1000px) {
+    display: block;
+  }
+  a {
+    font-size: 4em;
+    color: $black;
+    text-decoration: none;
+    @media (max-width: 500px) {
+      font-size: 3.5em;
+    }
+  }
+  img {
+    @media (max-width: 1000px) {
+      object-fit: contain;
+      height: auto;
+      object-position: center;
+      width: 100%;
+    }
+    @media (max-width: 500px) {
+      padding: 0 10px;
+    }
+  }
+}
+nav.topnav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 90px;
+  flex: 1;
+  transition: all 0.5s ease-in-out;
+  @media (max-width: 1000px) {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    background: $green;
+    top: 100%;
+    left: -100%;
+    transition: all 0.5s ease;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 50px;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+  #acrb-menu {
+    width: auto;
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: 1000px) {
+        display: block;
+        text-align: left;
+      }
+      @media (max-width: 500px) {
+        text-align: center;
+      }
+      li {
+        font-size: 16px;
+        list-style: none;
+        position: relative;
+        margin: auto;
+        ul.sub-menu {
+          position: absolute;
+          left: 0;
+          background: $white;
+          display: none;
+          padding-bottom: 10px;
+          width: 220px;
+          box-shadow: 6px 6px 20px #cacacab3;
+          @media (max-width: 1000px) {
+            position: relative;
+            background: #637d68;
+            visibility: hidden;
+            height: 0;
+            padding-left: 10px;
+            width: auto;
+            padding-bottom: 0;
+            box-shadow: none;
+          }
+          li {
+            display: block;
+            width: auto;
+            @media (max-width: 1000px) {
+              width: 100%;
+            }
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+          }
+        }
+        a {
+          position: relative;
+          text-decoration: none;
+          line-height: 50px;
+          letter-spacing: 1px;
+          margin: 0 20px;
+          display: block;
+          color: $black;
+          font-weight: 600;
+          &:hover {
+            &::after {
+              @include link-after;
+            }
+          }
+          @media (max-width: 1000px) {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+#acrb-menu ul li.current-menu-item a::after {
+  @include link-after;
+}
+nav.topnav.active {
+  @media (max-width: 1000px) {
+    left: 0;
+  }
+}
+nav.topnav.active #acrb-menu {
+  @media (max-width: 1000px) {
+    margin: 0 0;
+    width: 100%;
+  }
+  @media (max-width: 500px) {
+    margin: 0 auto;
+  }
+}
+.open-me {
+  height: auto !important;
+  visibility: visible !important;
+}
+// Hamburger
+.burger {
+  display: none;
+  cursor: pointer;
+  @media (max-width: 1000px) {
+    display: block;
+    background: $green;
+  }
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: $white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+.search-bar {
+  // font-family: "Prata", serif;
+  font-family: "Lato", sans-serif;
+  --size: 40px;
+  border: 2px solid $green;
+  display: flex;
+  border-radius: 50px;
+  height: var(--size);
+  width: 15%;
+  padding: 3px;
+  position: relative;
+  transition: width 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.15);
+  overflow: hidden;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  &__input {
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 1px;
+    flex-grow: 1;
+    font-size: 1.5rem;
+    padding: 0 0.5em;
+    border: 0;
+    // background: rgba(lightblue, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    line-height: var(--size);
+    opacity: 1;
+    cursor: initial;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &__submit {
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0;
+    background: $green;
+    // background: red;
+    border-radius: 50%;
+    width: calc(var(--size) - 10px);
+    height: calc(var(--size) - 10px);
+    // margin-left: auto;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 3px;
+    i.fas.fa-search {
+      color: $white;
+    }
+  }
+  // &:focus-within {
+  //   width: 15%;
+
+  //   .search-bar__input {
+  //     opacity: 1;
+  //     cursor: initial;
+  //     width: calc(100% - var(--size));
+  //   }
+
+  //   .search-bar__submit {
+  //     background: $green;
+  //     color: #fff;
+
+  //     &:focus,
+  //     &:hover {
+  //       outline: 0;
+  //       box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  //     }
+  //   }
+  // }
+}

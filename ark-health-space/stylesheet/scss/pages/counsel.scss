@@ -1,0 +1,162 @@
+#counceling {
+  .beige {
+    background: $beige;
+    .wrapper {
+      width: 1000px;
+    }
+  }
+  .cont-form {
+    margin: 80px 0;
+    padding: 20px 0;
+    @media (max-width: 1000px) {
+      padding: 10px 20px;
+      margin: 50px 0;
+    }
+    h3 {
+      @media (max-width: 500px) {
+        margin-top: 10px;
+      }
+    }
+  }
+  div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+  div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+  div.wpforms-container-full
+    .wpforms-form
+    .wpforms-field-row.wpforms-field-medium {
+    max-width: 100%;
+  }
+  textarea,
+  input,
+  select,
+  button {
+    font: inherit;
+    font-size: initial;
+  }
+  .wpforms-submit-container button {
+    display: inline-block;
+    padding: 10px 50px !important;
+    font-size: 18px !important;
+    background: $white;
+    color: $black;
+    border: 0;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &:hover {
+      background: $green;
+      color: $white;
+    }
+  }
+  // accordion
+  .consel-acc {
+    margin: 100px 0;
+  }
+  .tabs {
+    position: relative;
+    height: 360px;
+    padding: 30px 20px;
+    display: flex;
+    overflow: hidden;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      height: 100vh;
+      padding: 30px 20px 0px;
+    }
+    @media (max-width: 321px) {
+      height: 140vh;
+    }
+  }
+  .tabs .tab-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+    border-right: 2px solid #ccc;
+    padding: 0px 0px;
+    padding-right: 10px;
+    @media (max-width: 600px) {
+      width: 100%;
+      border-right: none;
+      height: 50%;
+    }
+  }
+  .tabs .tab-header > .th {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    color: $navy;
+    cursor: pointer;
+    padding-left: 10px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    outline: 4px solid white;
+  }
+  .tabs .tab-header > .th:hover,
+  .tabs .tab-header > .th.active {
+    color: $black;
+    background: $beige;
+  }
+  .tabs .tab-header .th i {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+  .tabs .tab-content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .tabs .tab-content > .tc > i {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: $beige;
+    color: $black;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+  }
+  .tabs .tab-content > .tc {
+    position: absolute;
+    text-align: left;
+    padding: 0px 20px;
+    top: -200%;
+    transition: all 0.7s ease-in-out;
+    @media (max-width: 600px) {
+      padding: 20px 20px 0px;
+    }
+  }
+  .tabs .tab-content > .tc h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: unset;
+  }
+  .tabs .tab-content > .tc.active {
+    top: 0px;
+  }
+
+  .tabs .tab-indicator {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: $beige;
+    left: 270px;
+    top: 30px;
+    transition: all 500ms ease-in-out;
+    @media (max-width: 1500px) {
+      left: 257px;
+    }
+    @media (max-width: 1000px) {
+      left: 239px;
+    }
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+}

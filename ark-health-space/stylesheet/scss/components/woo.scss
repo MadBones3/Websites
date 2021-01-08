@@ -1,0 +1,88 @@
+#acrb.woocommerce {
+  .product {
+    overflow: hidden;
+    p.stock {
+      font-size: initial;
+    }
+    p.price {
+      font-size: 3.5rem;
+    }
+    span.posted_in {
+      font-size: initial;
+    }
+  }
+  .woocommerce-breadcrumb {
+    justify-content: flex-start;
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+    width: 1600px;
+    align-items: center;
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 25px;
+    padding: 30px 0;
+    @media (max-width: 1500px) {
+      width: 1200px;
+    }
+  }
+  .quantity .qty {
+    height: 3em;
+  }
+  button.button,
+  a.button {
+    @include woo-btn;
+  }
+}
+
+// cart, checkout
+#acrb {
+  .woocommerce {
+    a.checkout-button {
+      @include woo-btn;
+    }
+    table.shop_table {
+      font-size: initial;
+    }
+    .coupon {
+      input {
+        width: 150px;
+      }
+      button {
+        @include woo-btn;
+      }
+    }
+    .actions button {
+      @include woo-btn;
+    }
+    .return-to-shop a {
+      @include woo-btn;
+    }
+  }
+  .woocommerce form .form-row input.input-text,
+  .woocommerce form .form-row textarea {
+    font: inherit;
+  }
+  .woocommerce-error,
+  .woocommerce-info,
+  .woocommerce-message {
+    font-size: initial;
+    border-top-color: $green;
+    &::before {
+      color: $green;
+    }
+  }
+  #place_order {
+    @include woo-btn;
+    display: block;
+    margin: 0 auto;
+    float: none !important;
+    padding: 15px 50px;
+  }
+}
+// input fields height
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text {
+  height: 3em;
+}

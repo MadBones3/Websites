@@ -1,0 +1,72 @@
+#footer {
+  // background: $green;
+  color: $white;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  .foot-flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    @media (max-width: 600px) {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      li {
+        a {
+          color: $white;
+          text-decoration: none;
+          position: relative;
+          &:hover {
+            &::after {
+              @include link-after-white;
+            }
+          }
+        }
+      }
+      li.current-menu-item a::after {
+        @include link-after-white;
+      }
+      li:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    .social {
+      .soicons {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        a {
+          color: $white;
+          font-size: 30px;
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          letter-spacing: 1px;
+          &:hover,
+          &:active,
+          &:focus {
+            transform: translateY(-5px);
+          }
+          @media (max-width: 600px) {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    h4 {
+      letter-spacing: 1px;
+    }
+  }
+  .copyRight {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 13px;
+  }
+}
